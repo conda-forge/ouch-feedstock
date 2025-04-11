@@ -6,7 +6,7 @@ export CARGO_PROFILE_RELEASE_STRIP=symbols
 export CARGO_PROFILE_RELEASE_LTO=fat
 
 if [[ "${build_platform}" == linux-* ]]; then
-    export LIBCLANG_PATH="$BUILD_PREFIX/lib"
+    export LIBCLANG_PATH="$PREFIX/lib"
 fi
 
 # build binary with Cargo
