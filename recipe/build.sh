@@ -7,7 +7,8 @@ export CARGO_PROFILE_RELEASE_LTO=fat
 
 if [[ "${build_platform}" == linux-* ]]; then
     export LIBCLANG_PATH="$BUILD_PREFIX/lib"
-    export INCLUDE="$BUILD_PREFIX/include"
+    export BZIP3_LIB_DIR="$BUILD_PREFIX/lib"
+    export BZIP3_INCLUDE_DIR="$BUILD_PREFIX/include"
 fi
 
 # build binary with Cargo
