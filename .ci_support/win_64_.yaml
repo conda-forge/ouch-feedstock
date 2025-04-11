@@ -1,11 +1,15 @@
 c_compiler:
-- vs2019
+- clang
+c_compiler_version:
+- '18'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- clangxx
+cxx_compiler_version:
+- '18'
 rust_compiler:
 - rust
 target_platform:
