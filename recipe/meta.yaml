@@ -19,7 +19,7 @@ requirements:
     - {{ compiler("c") }}
     - {{ compiler("cxx") }}
     - cargo-bundle-licenses
-    - libclang
+    - libclang  # [linux]
 
 test:
   commands:

@@ -1,8 +1,11 @@
-cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-if %errorlevel% neq 0 exit /b %errorlevel%
-cargo install --locked --bins --root %PREFIX% --path .
-if %errorlevel% neq 0 exit /b %errorlevel%
-del %PREFIX%\.crates2.json
-if %errorlevel% neq 0 exit /b %errorlevel%
-del %PREFIX%\.crates.toml
-if %errorlevel% neq 0 exit /b %errorlevel%
+@echo on
+
+set CARGO_PROFILE_RELEASE_STRIP=symbols
+set CARGO_PROFILE_RELEASE_LTO=fat
+
+cargo install --no-track --locked --root "%PREFIX%" --path . || exit 1
+
+cargo-bundle-licenses ^
+    --format yaml ^
+    --output "%SRC_DIR%\THIRDPARTY.yml" ^
+    || exit 1
