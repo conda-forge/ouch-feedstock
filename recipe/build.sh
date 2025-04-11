@@ -5,8 +5,9 @@ set -o xtrace -o nounset -o pipefail -o errexit
 export CARGO_PROFILE_RELEASE_STRIP=symbols
 export CARGO_PROFILE_RELEASE_LTO=fat
 
-if [[ "${target_platform}" == linux-* ]]; then
+if [[ "${build_platform}" == linux-* ]]; then
     export LIBCLANG_PATH="$BUILD_PREFIX/lib"
+    export INCLUDE="$BUILD_PREFIX/include"
 fi
 
 # build binary with Cargo
