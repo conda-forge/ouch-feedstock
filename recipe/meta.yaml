@@ -26,7 +26,16 @@ test:
     - ouch --version
     - ouch --help
     - touch test.txt
+    - ouch compress test.txt test.7z
+    - ouch compress test.txt test.br
+    - ouch compress test.txt test.bz2
+    - ouch compress test.txt test.bz3
+    - ouch compress test.txt test.gz
+    - ouch compress test.txt test.lz4
+    - ouch compress test.txt test.sz
+    - ouch compress test.txt test.xz
     - ouch compress test.txt test.zip
+    - ouch compress test.txt test.zst
 
 about:
   home: https://github.com/ouch-org/ouch
