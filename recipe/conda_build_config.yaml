@@ -1,0 +1,10 @@
+c_compiler:
+  - clang       # [unix]
+  - vs2019      # [win]
+c_compiler_version:
+  - 18          # [unix]
+cxx_compiler:
+  - clangxx     # [unix]
+  - vs2019      # [win]
+cxx_compiler_version:
+  - 18          # [unix]

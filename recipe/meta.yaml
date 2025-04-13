@@ -1,5 +1,5 @@
 {% set name = "ouch" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name | lower }}
@@ -7,24 +7,35 @@ package:
 
 source:
   url: https://github.com/ouch-org/ouch/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 46cc2b14f53de2f706436df59300eb90c5a58f08ac8c738fd976fcb8ec0cd335
+  sha256: c1430e3b99481eacd1802f6a9cd8dd837d4534cff974a29914d15d8130d19b16
 
 build:
   number: 0
 
 requirements:
   build:
-    - {{ compiler('rust') }}
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler("rust") }}
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+    - {{ stdlib("c") }}
     - cargo-bundle-licenses
+    - libclang  # [linux]
 
 test:
   commands:
     - ouch --version
     - ouch --help
     - touch test.txt
+    - ouch compress test.txt test.7z
+    - ouch compress test.txt test.br
+    - ouch compress test.txt test.bz2
+    - ouch compress test.txt test.bz3
+    - ouch compress test.txt test.gz
+    - ouch compress test.txt test.lz4
+    - ouch compress test.txt test.sz
+    - ouch compress test.txt test.xz
     - ouch compress test.txt test.zip
+    - ouch compress test.txt test.zst
 
 about:
   home: https://github.com/ouch-org/ouch
