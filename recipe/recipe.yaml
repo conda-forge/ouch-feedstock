@@ -23,6 +23,7 @@ requirements:
     - ${{ stdlib("c") }}
     - cmake
     - cargo-bundle-licenses
+    - cargo-auditable
     - if: linux
       then: libclang
 
