@@ -10,7 +10,7 @@ if [[ "${build_platform}" == linux-* ]]; then
 fi
 
 # build binary with Cargo
-cargo install --no-track --locked --root "$PREFIX" --path .
+cargo auditable install --no-track --locked --root "$PREFIX" --path .
 
 cargo-bundle-licenses \
     --format yaml \
