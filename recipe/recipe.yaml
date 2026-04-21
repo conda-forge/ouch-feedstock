@@ -21,6 +21,7 @@ requirements:
     - ${{ compiler("c") }}
     - ${{ compiler("cxx") }}
     - ${{ stdlib("c") }}
+    - cmake
     - cargo-bundle-licenses
     - if: linux
       then: libclang
