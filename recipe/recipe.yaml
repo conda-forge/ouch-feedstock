@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ouch
-  version: 0.6.1
+  version: "0.7.0"
 
 package:
   name: ${{ name | lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/ouch-org/ouch/archive/refs/tags/${{ version }}.tar.gz
-  sha256: e6265071affab228ba7d3ca85f2206029445038b3a3d96036e9bf02b795ad651
+  sha256: cbcfbc41cabfaa562dd7f8ca556f981d85612d3b1d457c00ea1b1ee59e19fb79
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -21,7 +21,12 @@ requirements:
     - ${{ compiler("c") }}
     - ${{ compiler("cxx") }}
     - ${{ stdlib("c") }}
+    - cmake
     - cargo-bundle-licenses
+    - cargo-auditable
+    - if: unix
+      then:
+        - make
     - if: linux
       then: libclang
 
