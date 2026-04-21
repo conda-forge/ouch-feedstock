@@ -24,6 +24,9 @@ requirements:
     - cmake
     - cargo-bundle-licenses
     - cargo-auditable
+    - if: unix
+      then:
+        - make
     - if: linux
       then: libclang
 
