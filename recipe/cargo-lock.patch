@@ -1,0 +1,22 @@
+From d34fe33f372169cf26a154ac8207802cdbf116de Mon Sep 17 00:00:00 2001
+From: Pavel Zwerschke <pavelzw@gmail.com>
+Date: Wed, 22 Apr 2026 09:44:29 +0200
+Subject: [PATCH] Update Cargo.lock
+
+---
+ Cargo.lock | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Cargo.lock b/Cargo.lock
+index fdbc4cac0..d92e4b2ab 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1158,7 +1158,7 @@ checksum = "945462a4b81e43c4e3ba96bd7b49d834c6f61198356aa858733bc4acf3cbe62e"
+ 
+ [[package]]
+ name = "ouch"
+-version = "0.6.1"
++version = "0.7.1"
+ dependencies = [
+  "anyhow",
+  "assert_cmd",
