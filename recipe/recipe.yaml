@@ -30,7 +30,7 @@ requirements:
       then: libclang
   host:
     - if: linux
-      then: libcxx-devel
+      then: libcxx-headers
 
 tests:
   - script:
