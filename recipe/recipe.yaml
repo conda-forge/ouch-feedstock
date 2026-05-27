@@ -28,6 +28,9 @@ requirements:
         - make
     - if: linux
       then: libclang
+  host:
+    - if: linux
+      then: libcxx-devel
 
 tests:
   - script:
