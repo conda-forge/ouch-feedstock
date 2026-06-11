@@ -27,7 +27,9 @@ requirements:
       then:
         - make
     - if: linux
-      then: libclang
+      then:
+        - ${{ stdlib("cxx") }}
+        - libclang
 
 tests:
   - script:
