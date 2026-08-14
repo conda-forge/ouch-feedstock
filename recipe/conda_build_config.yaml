@@ -8,5 +8,3 @@ cxx_compiler:
   - vs2019      # [win]
 cxx_compiler_version:
   - 18          # [unix]
-cxx_stdlib:
-  - sysroot     # [linux]
