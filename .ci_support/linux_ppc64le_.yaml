@@ -17,11 +17,11 @@ cxx_compiler_version:
 cxx_stdlib:
 - sysroot
 docker_image:
-- quay.io/condaforge/linux-anvil-aarch64:alma10
+- quay.io/condaforge/linux-anvil-ppc64le:alma10
 rust_compiler:
 - rust
 target_platform:
-- linux-aarch64
+- linux-ppc64le
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
