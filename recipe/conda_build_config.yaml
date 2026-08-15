@@ -9,4 +9,4 @@ cxx_compiler:
 cxx_compiler_version:
   - 18          # [unix]
 cxx_stdlib:
-  - sysroot     # [linux]
+  - libstdcxx   # [linux]
