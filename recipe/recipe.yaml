@@ -29,7 +29,7 @@ requirements:
     - if: linux
       then:
         - ${{ stdlib("cxx") }}
-        - libstdcxx-devel_linux-64
+        - libstdcxx-devel_${{ target_platform }}
         - libclang
 
 tests:
