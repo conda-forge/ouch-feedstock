@@ -10,9 +10,6 @@ package:
 source:
   url: https://github.com/ouch-org/ouch/archive/refs/tags/${{ version }}.tar.gz
   sha256: 803dd9d0bcdb0b4f94336bc1e9fbb5c878bf2867e03f58f266adc679c224698d
-  patches:
-    # https://github.com/ouch-org/ouch/pull/957
-    - cargo-lock.patch
 
 build:
   number: 0
