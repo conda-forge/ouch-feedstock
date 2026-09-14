@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.8.2"
+  version: "0.8.3"
 
 package:
   name: ouch
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/ouch-org/ouch/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 803dd9d0bcdb0b4f94336bc1e9fbb5c878bf2867e03f58f266adc679c224698d
+  sha256: f695393cbbd89cf5a2095c32235e585a85432ccfb902c78d2a2e9787abbb439c
 
 build:
   number: 0
